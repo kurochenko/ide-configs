@@ -9,7 +9,6 @@
 		     scala-mode2
 		     magit))
 
-changes to undo
 
 (require 'package)
 (require 'helm-ls-git)
@@ -56,8 +55,10 @@ changes to undo
 (require 'ensime)
 (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
-; Magit configuration
+					; Magit configuration
+(magit-file-mode t)
 (global-set-key (kbd "C-x g") 'magit-status)
+(global-set-key (kbd "C-x M-g") 'magit-dispatch-popup)
 
 
 (custom-set-variables
